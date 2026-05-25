@@ -1,0 +1,290 @@
+aid: blynk
+name: Blynk
+description: >-
+  Blynk is a low-code / no-code IoT software platform that helps companies
+  prototype, deploy, and remotely manage connected devices and applications
+  across consumer and commercial markets. The platform combines four
+  components — Blynk.Console (web dashboard), Blynk.Apps (white-labeled
+  iOS and Android apps), Blynk.Edgent (device-side connection library),
+  and Blynk.Cloud (managed backend) — into a full-stack offering that
+  removes the need to build custom IoT infrastructure. Developers can
+  build interactive mobile and web dashboards with a drag-and-drop
+  builder, connect hardware over Wi-Fi, Cellular, LoRaWAN, Ethernet, or
+  satellite, and operate fleets with provisioning, OTA firmware updates,
+  multi-tenancy, automations, webhooks, and SOC 2 cloud infrastructure.
+  Commercial customers use Blynk for branded consumer products,
+  industrial monitoring, agriculture, energy and HVAC, smart cities, and
+  smart buildings, with more than 5,000 companies and 1M+ developers on
+  the platform. Blynk exposes two HTTPS REST APIs — the Device HTTPS
+  API for telemetry and command exchange from individual hardware units,
+  and the Platform HTTPS API (Enterprise plan) for full programmatic
+  CRUD over devices, users, organizations, templates, automations,
+  webhooks, and tags using OAuth2 client-credential authentication.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - IoT
+  - Internet of Things
+  - No-Code
+  - Low-Code
+  - Connected Devices
+  - Device Management
+  - Fleet Management
+  - Mobile Apps
+  - Dashboards
+  - Telemetry
+  - Firmware
+  - Over The Air Updates
+  - White Label
+  - Embedded
+  - Smart Home
+  - Smart Buildings
+  - Smart Cities
+  - Industrial
+  - Agriculture
+  - Energy
+url: https://raw.githubusercontent.com/api-evangelist/blynk/refs/heads/main/apis.yml
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: blynk:blynk-device-https-api
+    name: Blynk Device HTTPS API
+    tags:
+      - IoT
+      - Device
+      - Telemetry
+      - Datastreams
+      - Events
+    humanURL: https://docs.blynk.io/en/blynk.cloud/device-https-api
+    properties:
+      - url: https://docs.blynk.io/en/blynk.cloud/device-https-api
+        type: Documentation
+      - url: https://docs.blynk.io/en/blynk.cloud/device-https-api/update-datastream-value
+        type: Documentation
+        name: Update Datastream Value
+      - url: https://docs.blynk.io/en/blynk.cloud/device-https-api/get-datastream-value
+        type: Documentation
+        name: Get Datastream Value
+      - url: https://docs.blynk.io/en/blynk.cloud/device-https-api/batch-update-datastreams
+        type: Documentation
+        name: Batch Update Datastreams
+      - url: https://docs.blynk.io/en/blynk.cloud/device-https-api/trigger-event
+        type: Documentation
+        name: Trigger Log Event
+      - url: https://docs.blynk.io/en/blynk.cloud/device-https-api/upload-file
+        type: Documentation
+        name: Upload File
+    description: >-
+      Token-authenticated HTTPS REST API used by individual devices to read
+      and write datastream values, batch update multiple datastreams,
+      retrieve historical data, set widget and datastream properties,
+      trigger log events, upload files, and read or update device
+      metadata. Base URL is https://{server}.blynk.cloud/external/api,
+      and requests authenticate via a per-device token. Commonly used by
+      MCU firmware (Arduino, ESP32, ESP8266, Raspberry Pi, Particle)
+      when the Blynk Library streaming protocol is not in use.
+  - aid: blynk:blynk-platform-https-api
+    name: Blynk Platform HTTPS API
+    tags:
+      - IoT
+      - Platform
+      - Administration
+      - Devices
+      - Users
+      - Organizations
+      - Templates
+      - Webhooks
+      - Tags
+      - Automations
+    humanURL: https://docs.blynk.io/en/blynk.cloud/platform-https-api
+    properties:
+      - url: https://docs.blynk.io/en/blynk.cloud/platform-https-api
+        type: Documentation
+      - url: https://docs.blynk.io/en/blynk.cloud/platform-https-api/devices.md
+        type: Documentation
+        name: Devices
+      - url: https://docs.blynk.io/en/blynk.cloud/platform-https-api/users.md
+        type: Documentation
+        name: Users
+      - url: https://docs.blynk.io/en/blynk.cloud/platform-https-api/organizations.md
+        type: Documentation
+        name: Organizations
+      - url: https://docs.blynk.io/en/blynk.cloud/platform-https-api/templates.md
+        type: Documentation
+        name: Templates
+      - url: https://docs.blynk.io/en/blynk.cloud/platform-https-api/automations.md
+        type: Documentation
+        name: Automations
+      - url: https://docs.blynk.io/en/blynk.cloud/platform-https-api/webhooks.md
+        type: Documentation
+        name: Webhooks
+      - url: https://docs.blynk.io/en/blynk.cloud/platform-https-api/tags.md
+        type: Documentation
+        name: Tags
+    description: >-
+      Enterprise-tier OAuth2 REST API for full programmatic CRUD across
+      Blynk Cloud tenancy. Resources include devices (create from
+      template, list, search, online status, tags, timeline, update,
+      delete), users (list, search, invite, register, transfer, role
+      updates, push notifications), organizations and sub-organizations,
+      templates, automations, webhooks, and tags. Authentication uses
+      OAuth2 client credentials issued in Blynk.Console, exchanged via
+      POST /oauth2/token for a bearer access token, and requests are
+      rate-limited to 10,000 per minute per organization. Resource
+      identifiers are supplied as query parameters.
+  - aid: blynk:blynk-device-streaming-protocol
+    name: Blynk Device Streaming Protocol
+    tags:
+      - IoT
+      - Streaming
+      - Real Time
+      - Bidirectional
+      - Firmware
+      - Embedded
+    humanURL: https://docs.blynk.io/en/getting-started/intro
+    properties:
+      - url: https://docs.blynk.io/en/blynk-library-firmware-api
+        type: Documentation
+        name: Blynk Library Firmware API
+      - url: https://github.com/blynkkk/blynk-library
+        type: SourceCode
+        name: blynk-library (C++)
+    description: >-
+      Bi-directional low-latency streaming connection protocol used by
+      the Blynk Library and Blynk.Edgent to maintain a persistent link
+      between devices and Blynk.Cloud. Optimized for constrained MCUs
+      (Arduino, ESP32, ESP8266, Particle, Raspberry Pi), the protocol
+      delivers virtual-pin reads and writes, widget property updates,
+      and remote commands without the overhead of polling the HTTPS
+      Device API. Surfaced to firmware developers as the Blynk Library
+      C++ API.
+common:
+  - type: Website
+    url: https://blynk.io
+  - type: Portal
+    url: https://docs.blynk.io
+  - type: Documentation
+    url: https://docs.blynk.io/en/getting-started/intro
+  - type: GettingStarted
+    url: https://docs.blynk.io/en/getting-started
+  - type: SignUp
+    url: https://blynk.cloud/dashboard/register
+  - type: Login
+    url: https://blynk.cloud/dashboard/login
+  - type: Console
+    url: https://blynk.cloud
+    name: Blynk.Console
+  - type: MobileApp
+    url: https://blynk.io/blynk-iot-mobile-app
+    name: Blynk.Apps
+  - type: Pricing
+    url: https://blynk.io/pricing
+  - type: Plans
+    url: https://blynk.io/pricing
+  - type: Solutions
+    url: https://blynk.io/solutions
+  - type: UseCases
+    url: https://blynk.io/use-cases
+  - type: CaseStudies
+    url: https://blynk.io/case-studies
+  - type: Customers
+    url: https://blynk.io/customers
+  - type: Blog
+    url: https://blynk.io/resources/blog
+  - type: Resources
+    url: https://blynk.io/resources
+  - type: Forum
+    url: https://community.blynk.cc
+    name: Blynk Community
+  - type: Support
+    url: https://blynk.io/contact-us
+  - type: Contact
+    url: https://blynk.io/contact-us
+  - type: AboutUs
+    url: https://blynk.io/about-us
+  - type: Careers
+    url: https://blynk.io/careers
+  - type: Partners
+    url: https://blynk.io/partners
+  - type: Security
+    url: https://blynk.io/security
+  - type: TermsOfService
+    url: https://blynk.io/terms-and-conditions
+  - type: PrivacyPolicy
+    url: https://blynk.io/privacy-policy
+  - type: Authentication
+    url: https://docs.blynk.io/en/blynk.cloud/platform-https-api
+    name: OAuth2 Client Credentials
+  - type: RateLimits
+    url: https://docs.blynk.io/en/blynk.cloud/platform-https-api
+    name: Platform API Rate Limits (10,000/min/org)
+  - type: Webhooks
+    url: https://docs.blynk.io/en/blynk.cloud/platform-https-api/webhooks.md
+  - type: GitHubOrganization
+    url: https://github.com/blynkkk
+  - type: SourceCode
+    url: https://github.com/blynkkk/blynk-library
+    name: blynk-library (Arduino, ESP32, ESP8266, RPi, Particle)
+  - type: SDK
+    url: https://github.com/blynkkk/blynk-library
+    name: Blynk Library (C++)
+  - type: SDK
+    url: https://github.com/Blynk-Technologies/Edgent-PlatformIO
+    name: Blynk.Edgent — PlatformIO Templates
+  - type: CodeExamples
+    url: https://github.com/Blynk-Technologies/Blynk-NCP-Example-Arduino
+    name: Blynk.NCP Example (Arduino)
+  - type: Templates
+    url: https://github.com/blynkkk/blueprints
+    name: Blynk Blueprints
+  - type: MobileApp
+    url: https://apps.apple.com/us/app/blynk-iot/id1559317868
+    name: Blynk IoT (iOS)
+  - type: MobileApp
+    url: https://play.google.com/store/apps/details?id=cloud.blynk
+    name: Blynk IoT (Android)
+  - type: Twitter
+    url: https://twitter.com/blynk_app
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/blynkk
+  - type: YouTube
+    url: https://www.youtube.com/c/blynk
+  - type: Facebook
+    url: https://www.facebook.com/blynkapp
+  - type: Features
+    data:
+      - Drag-and-drop mobile app builder for iOS and Android (Blynk.Apps)
+      - Web console for device management, dashboards, and fleet operations (Blynk.Console)
+      - White-label branded apps for commercial deployments
+      - Over-the-air (OTA) firmware updates with rollout management
+      - Device provisioning, claiming, and lifecycle management
+      - Multi-tenancy with organizations and sub-organizations
+      - Real-time bi-directional streaming protocol via Blynk Library
+      - Device HTTPS API for token-authenticated telemetry and commands
+      - Platform HTTPS API with OAuth2 for full CRUD across devices, users, templates, automations, webhooks, tags
+      - MQTT support for device connectivity
+      - Webhooks for outbound integrations
+      - Automations engine (event-driven rules) and scheduling
+      - Multi-protocol device connectivity — Wi-Fi, Ethernet, Cellular, LoRaWAN, Satellite
+      - Pre-integrated with hundreds of MCU boards (Arduino, ESP32, ESP8266, Raspberry Pi, Particle, Nordic)
+      - Blynk.Edgent — packaged device-side connectivity stack
+      - Blynk.NCP — network co-processor reference design
+      - SOC 2 compliant managed cloud infrastructure (Blynk.Cloud)
+      - On-premise / private-server option for Enterprise customers
+      - SMS and push notifications, email alerts
+      - Custom branding, app store publishing for white-label apps
+      - Data retention from 1 week (Free) to 12 months (Production) to custom (Enterprise)
+      - Rate limit of 10,000 Platform API requests per minute per organization
+      - 99.95% uptime SLA on Production plan, 99.99% on Enterprise
+    sources:
+      - https://blynk.io
+      - https://blynk.io/pricing
+      - https://docs.blynk.io/en/blynk.cloud/platform-https-api
+      - https://docs.blynk.io/en/blynk.cloud/device-https-api
+    updated: '2026-05-25'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
