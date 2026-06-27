@@ -170,7 +170,7 @@ common:
     url: https://docs.blynk.io/en/getting-started/intro
   - type: GettingStarted
     url: https://docs.blynk.io/en/getting-started
-  - type: SignUp
+  - type: Signup
     url: https://blynk.cloud/dashboard/register
   - type: Login
     url: https://blynk.cloud/dashboard/login
@@ -196,7 +196,7 @@ common:
     url: https://blynk.io/resources/blog
   - type: Resources
     url: https://blynk.io/resources
-  - type: Forum
+  - type: Forums
     url: https://community.blynk.cc
     name: Blynk Community
   - type: Support
@@ -228,10 +228,10 @@ common:
   - type: SourceCode
     url: https://github.com/blynkkk/blynk-library
     name: blynk-library (Arduino, ESP32, ESP8266, RPi, Particle)
-  - type: SDK
+  - type: SDKs
     url: https://github.com/blynkkk/blynk-library
     name: Blynk Library (C++)
-  - type: SDK
+  - type: SDKs
     url: https://github.com/Blynk-Technologies/Edgent-PlatformIO
     name: Blynk.Edgent — PlatformIO Templates
   - type: CodeExamples
