@@ -162,6 +162,8 @@ apis:
       Device API. Surfaced to firmware developers as the Blynk Library
       C++ API.
 common:
+  - type: DomainSecurity
+    url: security/blynk-domain-security.yml
   - type: Website
     url: https://blynk.io
   - type: Portal
