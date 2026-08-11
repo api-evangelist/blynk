@@ -173,6 +173,13 @@ apis:
       Device API. Surfaced to firmware developers as the Blynk Library
       C++ API.
 common:
+  - type: IssueTracker
+    url: https://github.com/blynkkk/blynk-library/issues
+  - type: Releases
+    url: https://github.com/blynkkk/blynk-library/releases
+  - type: License
+    name: MIT
+    url: https://github.com/blynkkk/blynk-library/blob/master/LICENSE
   - type: DomainSecurity
     url: security/blynk-domain-security.yml
   - type: Website
