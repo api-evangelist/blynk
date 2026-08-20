@@ -47,6 +47,27 @@ tags:
   - Dashboards
   - Telemetry
   - Firmware
+  - Over-the-Air Updates
+  - White Label
+  - Embedded
+  - Smart Home
+  - Smart Buildings
+  - Smart Cities
+  - Industrial
+  - Agriculture
+  - Energy
+tags_raw:
+  - IoT
+  - Internet of Things
+  - No-Code
+  - Low-Code
+  - Connected Devices
+  - Device Management
+  - Fleet Management
+  - Mobile Apps
+  - Dashboards
+  - Telemetry
+  - Firmware
   - Over The Air Updates
   - White Label
   - Embedded
@@ -64,6 +85,12 @@ apis:
   - aid: blynk:blynk-device-https-api
     name: Blynk Device HTTPS API
     tags:
+      - IoT
+      - Device
+      - Telemetry
+      - Data Streams
+      - Event
+    tags_raw:
       - IoT
       - Device
       - Telemetry
@@ -100,6 +127,17 @@ apis:
   - aid: blynk:blynk-platform-https-api
     name: Blynk Platform HTTPS API
     tags:
+      - IoT
+      - Platform
+      - Administration
+      - Devices
+      - User
+      - Organization
+      - Templates
+      - Webhook
+      - Tags
+      - Automations
+    tags_raw:
       - IoT
       - Platform
       - Administration
@@ -149,6 +187,13 @@ apis:
   - aid: blynk:blynk-device-streaming-protocol
     name: Blynk Device Streaming Protocol
     tags:
+      - IoT
+      - Streaming
+      - Real-Time
+      - Bidirectional
+      - Firmware
+      - Embedded
+    tags_raw:
       - IoT
       - Streaming
       - Real Time
