@@ -50,13 +50,12 @@ access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blynk.png
 tags:
   - IoT
-  - Internet of Things
   - No-Code
   - Low-Code
   - Connected Devices
   - Device Management
   - Fleet Management
-  - Mobile Apps
+  - Mobile App
   - Dashboards
   - Telemetry
   - Firmware
@@ -149,7 +148,7 @@ apis:
       - Templates
       - Webhook
       - Tags
-      - Automations
+      - Automation
     tags_raw:
       - IoT
       - Platform
