@@ -1,4 +1,4 @@
-# Blynk (blynk)
+# Blynk
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,115 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Blynk is a low-code / no-code IoT software platform that helps companies prototype, deploy, and remotely manage connected devices and applications across consumer and commercial markets. The platform combines Blynk.Console (web dashboard), Blynk.Apps (white-labeled iOS / Android apps), Blynk.Edgent (device-side connectivity library), and Blynk.Cloud (managed backend) into a full-stack offering that removes the need to build custom IoT infrastructure. More than 5,000 companies and 1M+ developers use Blynk across agriculture, industrial monitoring, energy and HVAC, smart cities, smart buildings, and consumer products.
+Blynk is a low-code / no-code IoT software platform that helps companies prototype, deploy, and remotely manage connected devices and applications across consumer and commercial markets. The platform combines four components — Blynk.Console (web dashboard), Blynk.Apps (white-labeled iOS and Android apps), Blynk.Edgent (device-side connection library), and Blynk.Cloud (managed backend) — into a full-stack offering that removes the need to build custom IoT infrastructure. Developers can build interactive mobile and web dashboards with a drag-and-drop builder, connect hardware over Wi-Fi, Cellular, LoRaWAN, Ethernet, or satellite, and operate fleets with provisioning, OTA firmware updates, multi-tenancy, automations, webhooks, and SOC 2 cloud infrastructure. Commercial customers use Blynk for branded consumer products, industrial monitoring, agriculture, energy and HVAC, smart cities, and smart buildings, with more than 5,000 companies and 1M+ developers on the platform. Blynk exposes two HTTPS REST APIs — the Device HTTPS API for telemetry and command exchange from individual hardware units, and the Platform HTTPS API (Enterprise plan) for full programmatic CRUD over devices, users, organizations, templates, automations, webhooks, and tags using OAuth2 client-credential authentication.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/blynk/refs/heads/main/apis.yml)
+**Areas:** IoT · No-Code · Low-Code · Connected Devices · Device Management · Fleet Management · Mobile App · Dashboards · Telemetry · Firmware · Over-the-Air Updates · White Label
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Blynk on APIs.io
 
-## Tags
+Everything profiled for Blynk is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/blynk/](https://apis.io/providers/blynk/)** — or go straight to one of the APIs or properties below.
 
- - IoT, Internet of Things, No-Code, Low-Code, Connected Devices, Device Management, Fleet Management, Mobile Apps, Dashboards, Telemetry, Firmware, Over The Air Updates, White Label, Embedded, Smart Home, Smart Buildings, Smart Cities, Industrial, Agriculture, Energy
+### APIs (3)
 
-## Timestamps
+- [Blynk Device HTTPS API](https://apis.io/apis/blynk/blynk-device-https-api/) — Token-authenticated HTTPS REST API used by individual devices to read and write datastream values, batch update multiple datastreams, retrieve historical…
+- [Blynk Platform HTTPS API](https://apis.io/apis/blynk/blynk-platform-https-api/) — Enterprise-tier OAuth2 REST API for full programmatic CRUD across Blynk Cloud tenancy. Resources include devices (create from template, list, search, online…
+- [Blynk Device Streaming Protocol](https://apis.io/apis/blynk/blynk-device-streaming-protocol/) — Bi-directional low-latency streaming connection protocol used by the Blynk Library and Blynk.Edgent to maintain a persistent link between devices and…
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Blynk Device HTTPS API
-Token-authenticated REST API for individual devices to read and write datastream values, batch-update multiple datastreams, retrieve history, set widget and datastream properties, trigger log events, upload files, and read or update device metadata. Base URL is `https://{server}.blynk.cloud/external/api`.
+#### Security (1)
 
-**Human URL:** [https://docs.blynk.io/en/blynk.cloud/device-https-api](https://docs.blynk.io/en/blynk.cloud/device-https-api)
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://docs.blynk.io/en/blynk.cloud/device-https-api)
-- [Update Datastream Value](https://docs.blynk.io/en/blynk.cloud/device-https-api/update-datastream-value)
-- [Get Datastream Value](https://docs.blynk.io/en/blynk.cloud/device-https-api/get-datastream-value)
-- [Batch Update Datastreams](https://docs.blynk.io/en/blynk.cloud/device-https-api/batch-update-datastreams)
-- [Trigger Log Event](https://docs.blynk.io/en/blynk.cloud/device-https-api/trigger-event)
-- [Upload File](https://docs.blynk.io/en/blynk.cloud/device-https-api/upload-file)
+- [Blynk Domain Security](https://apis.io/security/blynk/blynk-domain-security/)
 
-### Blynk Platform HTTPS API
-Enterprise-tier OAuth2 REST API for full CRUD across Blynk Cloud — devices, users, organizations, templates, automations, webhooks, and tags. Bearer tokens are obtained from `POST /oauth2/token`; rate-limited to 10,000 requests per minute per organization.
+## Where to find this API
 
-**Human URL:** [https://docs.blynk.io/en/blynk.cloud/platform-https-api](https://docs.blynk.io/en/blynk.cloud/platform-https-api)
-
-- [Documentation](https://docs.blynk.io/en/blynk.cloud/platform-https-api)
-- [Devices](https://docs.blynk.io/en/blynk.cloud/platform-https-api/devices.md)
-- [Users](https://docs.blynk.io/en/blynk.cloud/platform-https-api/users.md)
-- [Organizations](https://docs.blynk.io/en/blynk.cloud/platform-https-api/organizations.md)
-- [Templates](https://docs.blynk.io/en/blynk.cloud/platform-https-api/templates.md)
-- [Automations](https://docs.blynk.io/en/blynk.cloud/platform-https-api/automations.md)
-- [Webhooks](https://docs.blynk.io/en/blynk.cloud/platform-https-api/webhooks.md)
-- [Tags](https://docs.blynk.io/en/blynk.cloud/platform-https-api/tags.md)
-
-### Blynk Device Streaming Protocol
-Bi-directional, low-latency streaming protocol used by the Blynk Library and Blynk.Edgent to maintain a persistent link between MCUs (Arduino, ESP32, ESP8266, Particle, Raspberry Pi) and Blynk.Cloud. Surfaced to firmware developers as the Blynk Library C++ API.
-
-**Human URL:** [https://docs.blynk.io/en/getting-started/intro](https://docs.blynk.io/en/getting-started/intro)
-
-- [Blynk Library Firmware API](https://docs.blynk.io/en/blynk-library-firmware-api)
-- [blynk-library (C++) — GitHub](https://github.com/blynkkk/blynk-library)
-
-## Plans
-
-| Plan | Price | Devices | Users | Data Retention | Messages | Notes |
-|---|---|---|---|---|---|---|
-| Free | $0 / month | 5 | 1 | 1 week | 100k / month | Entry-level exploration |
-| Starter | $29 / month | 10 | 1 | 1 month | 10M / month | Hobby projects, PoCs |
-| Prototype | $99 / month | 50 | 50 | 6 months | Unlimited | Prototyping tier |
-| Production | $199–$1,099 / month | 100–1,000 | 100–1,000 | 12 months | Unlimited | 99.95% uptime SLA, SMS, priority support |
-| Enterprise | Custom | Custom | Custom | Custom | Custom | White-label, on-prem option, 99.99% uptime SLA, dedicated DevOps |
-
-## Common Resources
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://blynk.io)
-- [Documentation Portal](https://docs.blynk.io)
-- [Getting Started](https://docs.blynk.io/en/getting-started)
-- [Blynk.Console](https://blynk.cloud)
-- [Blynk Mobile App (iOS)](https://apps.apple.com/us/app/blynk-iot/id1559317868)
-- [Blynk Mobile App (Android)](https://play.google.com/store/apps/details?id=cloud.blynk)
+- [Documentation](https://docs.blynk.io/en/getting-started/intro)
+- [Getting started](https://docs.blynk.io/en/getting-started)
 - [Pricing](https://blynk.io/pricing)
-- [Solutions](https://blynk.io/solutions)
-- [Use Cases](https://blynk.io/use-cases)
-- [Case Studies](https://blynk.io/case-studies)
+- [Support](https://blynk.io/contact-us)
 - [Blog](https://blynk.io/resources/blog)
-- [Community Forum](https://community.blynk.cc)
-- [GitHub Organization (blynkkk)](https://github.com/blynkkk)
-- [blynk-library (C++)](https://github.com/blynkkk/blynk-library)
-- [Edgent-PlatformIO templates](https://github.com/Blynk-Technologies/Edgent-PlatformIO)
-- [Blynk.NCP Arduino example](https://github.com/Blynk-Technologies/Blynk-NCP-Example-Arduino)
-- [Blueprints](https://github.com/blynkkk/blueprints)
 - [Security](https://blynk.io/security)
-- [Terms of Service](https://blynk.io/terms-and-conditions)
-- [Privacy Policy](https://blynk.io/privacy-policy)
+- [Terms of service](https://blynk.io/terms-and-conditions)
+- [Privacy policy](https://blynk.io/privacy-policy)
+- [GitHub](https://github.com/blynkkk)
 
-## Features
+## API Evangelist rating
 
-- Drag-and-drop mobile app builder for iOS and Android (Blynk.Apps)
-- Web console for device management, dashboards, and fleet operations (Blynk.Console)
-- White-label branded apps for commercial deployments
-- Over-the-air (OTA) firmware updates with rollout management
-- Device provisioning, claiming, and lifecycle management
-- Multi-tenancy with organizations and sub-organizations
-- Real-time bi-directional streaming protocol via Blynk Library
-- Device HTTPS API for token-authenticated telemetry and commands
-- Platform HTTPS API with OAuth2 for full CRUD across devices, users, templates, automations, webhooks, tags
-- MQTT support for device connectivity
-- Webhooks for outbound integrations
-- Automations engine (event-driven rules) and scheduling
-- Multi-protocol device connectivity — Wi-Fi, Ethernet, Cellular, LoRaWAN, Satellite
-- Pre-integrated with hundreds of MCU boards (Arduino, ESP32, ESP8266, Raspberry Pi, Particle, Nordic)
-- Blynk.Edgent — packaged device-side connectivity stack
-- Blynk.NCP — network co-processor reference design
-- SOC 2 compliant managed cloud infrastructure (Blynk.Cloud)
-- On-premise / private-server option for Enterprise customers
-- SMS and push notifications, email alerts
-- Custom branding, app store publishing for white-label apps
-- Rate limit of 10,000 Platform API requests per minute per organization
-- 99.95% uptime SLA on Production plan, 99.99% on Enterprise
+**Kin Score 27.5** — thin · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 6.4 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 54.8 |
+| Access clarity | 27.6 |
 
-- **Kin Lane** — kin@apievangelist.com
+**Agent readiness 10.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.1** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/blynk/](https://apis.io/providers/blynk/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Blynk: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/blynk/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
